@@ -3,8 +3,8 @@
 class LinkedList
 {
 	struct Node {
-		int data;
-		Node* next;
+		int data = 0;
+		Node* next = nullptr;
 	};
 	Node* start = nullptr;
 public:
