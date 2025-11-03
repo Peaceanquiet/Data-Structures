@@ -9,5 +9,7 @@ class LinkedList
 	Node* start = nullptr;
 public:
 	void push(int newData);
+	void push_back(int newData);
+	void iterate_list();
 };
 
