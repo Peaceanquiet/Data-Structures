@@ -4,11 +4,9 @@
 void LinkedList::push(int newData) {
 	Node* newNode = new Node;
 	newNode->data = newData;
-	
 	if (start == nullptr) {
 		start = newNode;
-	}
-	else {
+	} else {
 		newNode->next = start;
 		start = newNode;
 }	}
@@ -16,22 +14,20 @@ void LinkedList::push(int newData) {
 void LinkedList::push_back(int newData) {
 	Node* newNode = new Node;
 	newNode->data = newData;
-
 	if (start == nullptr) {
 		push(newData);
-	}
-	else {
+	} else {
 		Node* temp = start;
-		while (start != nullptr) {
-			std::cout << start->data << " " << start->next << std::endl;
-			start = start->next;
-
-}	}	}
+		while (temp->next != nullptr) {
+			temp = temp->next;
+		}
+		temp->next = newNode;
+}	}
 
 void LinkedList::iterate_list() {
-	while (start != nullptr) {
-		std::cout << "Node: " << start << std::endl;
-		std::cout << "Data: " << start->data << std::endl;
-		std::cout << "Next: " << start->next << std::endl << std::endl;
-		start = start->next;
+	std::cout << "Iterating List...\n";
+	Node* iter = start;
+	while (iter != nullptr) {
+		std::cout << iter->data << " ";
+		iter = iter->next;
 }	}
