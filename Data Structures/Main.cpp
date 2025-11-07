@@ -1,18 +1,34 @@
 #include"LinkedList.h"
+#include<chrono>
+#include<iostream>
+
 
 int main() {
 
 	LinkedList list;
 
+	list.printList();
 	list.push(1);
-	list.push(2);
-	list.push(3);
-	list.push(4);
+	list.printList();
+	list.push_back(2);
+	list.printList();
+	list.insert(3, 3);
+	list.printList();
+	list.push_back(4);
+	list.printList();
 	list.push_back(5);
-	list.push_back(6);
-	list.push_back(7);
-	list.push_back(8);
-	list.iterate_list();
+	list.printList();
+	list.remove(1);
+	list.printList();
+	list.printList();
+	list.pop();
+	list.printList();
+	list.pop_back();
+	list.printList();
+	list.push(7);
+	list.printList();
+	list.push_back(9);
+	list.printList();
 
 	return 0;
 }
