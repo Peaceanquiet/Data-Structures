@@ -115,13 +115,11 @@ void LinkedList::pop_back() {
 	remove(count);
 }
 
-LinkedList::~LinkedList()
-{
+LinkedList::~LinkedList() {
 	Node* currNode = start;
 	while (currNode != nullptr) {
 		Node* toDelete = currNode;
 		currNode = currNode->next;
 		delete toDelete;
 	}
-	return;
 }
